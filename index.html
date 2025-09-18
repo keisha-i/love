@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HIHI</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: system-ui, Segoe UI, Roboto, Arial;
+      background: #fce4ec;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .envelope {
+      position: relative;
+      width: 200px;
+      height: 120px;
+      background: #f48fb1;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    }
+    .envelope::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-left: 100px solid transparent;
+      border-right: 100px solid transparent;
+      border-bottom: 60px solid #ec407a;
+    }
+    .heart {
+      font-size: 40px;
+      position: absolute;
+      top: 35px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: beat 1s infinite;
+    }
+    @keyframes beat {
+      0%, 100% { transform: translateX(-50%) scale(1); }
+      50% { transform: translateX(-50%) scale(1.3); }
+    }
+    .open-btn {
+      margin-top: 30px;
+      padding: 12px 25px;
+      background: #ec407a;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+    .open-btn:hover {
+      background: #d81b60;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="envelope">
+    <div class="heart">❤️</div>
+  </div>
+  <!-- Link to love.html -->
+  <a href="secret.html">
+    <button class="open-btn">Open</button>
+  </a>
+</body>
+</html>
